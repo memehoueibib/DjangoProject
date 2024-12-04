@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestion des Tâches</title>
+</head>
+<body>
+    <h1>Liste des Tâches</h1>
+    <ul>
+        {% for task in tasks %}
+        <li>
+            {{ task.title }} - {{ task.description }}
+            <a href="{% url 'delete_task' task.id %}">Supprimer</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_task' %}">Ajouter une nouvelle tâche</a>
+</body>
+</html>

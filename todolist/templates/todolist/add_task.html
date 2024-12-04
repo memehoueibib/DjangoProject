@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ajouter une Tâche</title>
+</head>
+<body>
+    <h1>Ajouter une Tâche</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="title">Titre :</label>
+        <input type="text" name="title" id="title" required><br>
+        <label for="description">Description :</label>
+        <textarea name="description" id="description"></textarea><br>
+        <button type="submit">Ajouter</button>
+    </form>
+</body>
+</html>
